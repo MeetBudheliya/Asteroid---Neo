@@ -13,6 +13,10 @@
 		BD60A18528C6122200FED2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60A18328C6122200FED2FD /* Main.storyboard */; };
 		BD60A18728C6122400FED2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD60A18628C6122400FED2FD /* Assets.xcassets */; };
 		BD60A18A28C6122400FED2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60A18828C6122400FED2FD /* LaunchScreen.storyboard */; };
+		BD60A19328C6161D00FED2FD /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD60A19228C6161D00FED2FD /* IQKeyboardManagerSwift */; };
+		BD60A19628C6189400FED2FD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60A19528C6189400FED2FD /* UIViewController+Extension.swift */; };
+		BD60A19928C61B8300FED2FD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60A19828C61B8300FED2FD /* Constant.swift */; };
+		BD60A19C28C62A1B00FED2FD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = BD60A19B28C62A1B00FED2FD /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		BD60A18628C6122400FED2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD60A18928C6122400FED2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD60A18B28C6122400FED2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD60A19528C6189400FED2FD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BD60A19828C61B8300FED2FD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD60A19328C6161D00FED2FD /* IQKeyboardManagerSwift in Frameworks */,
+				BD60A19C28C62A1B00FED2FD /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +66,31 @@
 			children = (
 				BD60A17D28C6122200FED2FD /* AppDelegate.swift */,
 				BD60A17F28C6122200FED2FD /* SceneDelegate.swift */,
-				BD60A18128C6122200FED2FD /* ViewController.swift */,
+				BD60A19828C61B8300FED2FD /* Constant.swift */,
+				BD60A19428C6187700FED2FD /* Controllers */,
+				BD60A19728C6189C00FED2FD /* Helpers */,
 				BD60A18328C6122200FED2FD /* Main.storyboard */,
 				BD60A18628C6122400FED2FD /* Assets.xcassets */,
 				BD60A18828C6122400FED2FD /* LaunchScreen.storyboard */,
 				BD60A18B28C6122400FED2FD /* Info.plist */,
 			);
 			path = "Asteroid - Neo";
+			sourceTree = "<group>";
+		};
+		BD60A19428C6187700FED2FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD60A18128C6122200FED2FD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD60A19728C6189C00FED2FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD60A19528C6189400FED2FD /* UIViewController+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,10 @@
 			dependencies = (
 			);
 			name = "Asteroid - Neo";
+			packageProductDependencies = (
+				BD60A19228C6161D00FED2FD /* IQKeyboardManagerSwift */,
+				BD60A19B28C62A1B00FED2FD /* Charts */,
+			);
 			productName = "Asteroid - Neo";
 			productReference = BD60A17A28C6122200FED2FD /* Asteroid - Neo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,10 @@
 				Base,
 			);
 			mainGroup = BD60A17128C6122200FED2FD;
+			packageReferences = (
+				BD60A19128C6161D00FED2FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				BD60A19A28C62A1B00FED2FD /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = BD60A17B28C6122200FED2FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD60A19628C6189400FED2FD /* UIViewController+Extension.swift in Sources */,
 				BD60A18228C6122200FED2FD /* ViewController.swift in Sources */,
+				BD60A19928C61B8300FED2FD /* Constant.swift in Sources */,
 				BD60A17E28C6122200FED2FD /* AppDelegate.swift in Sources */,
 				BD60A18028C6122200FED2FD /* SceneDelegate.swift in Sources */,
 			);
@@ -217,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,6 +394,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD60A19128C6161D00FED2FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BD60A19A28C62A1B00FED2FD /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD60A19228C6161D00FED2FD /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD60A19128C6161D00FED2FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		BD60A19B28C62A1B00FED2FD /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD60A19A28C62A1B00FED2FD /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD60A17228C6122200FED2FD /* Project object */;
 }
